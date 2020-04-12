@@ -19,6 +19,8 @@ public class clasePrincipal {
 		
 		do {
 		System.out.println("1.-Registrarse");
+		//  Para adquirir o ver algun producto es necesario Iniciar sesion y para iniciar sesion es 
+		//  necesario estar registrado
 		System.out.println("2.-Iniciar sesión");
 		System.out.println("3.-Salir");
 		opcion=entrada.nextInt();
@@ -97,8 +99,7 @@ public class clasePrincipal {
 				System.out.println("ERROR, introduzca correctamente la contraseña y nombre de usuario");
 			}
 			
-			// Mostrar precio final con preoductos seleccionados 
-//			tick.mostrarTelefonoComprado();
+
 
 			break;
 			
