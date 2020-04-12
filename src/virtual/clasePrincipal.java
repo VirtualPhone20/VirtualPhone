@@ -10,38 +10,40 @@ public class clasePrincipal {
 	static ticket tick = new ticket();
 	
 	public static void main(String[] args) {
-		//lista.mostrarTelefonos();
+	
 		mostrarMenu();
 	}
+	
 	public static void mostrarMenu() {
 		int opcion;
-		boolean continuar = false;
 		
 		do {
-		System.out.println("1.-Registrar");
+		System.out.println("1.-Registrarse");
 		System.out.println("2.-Iniciar sesión");
 		System.out.println("3.-Salir");
 		opcion=entrada.nextInt();
-		
+		// Cuando se quiera parar la ejecucion de programa pulsar 3.
 		switch (opcion) {
 		case 1:
 			
 			int cont = 0;		// Cntidad de Usuarios
 			while(1 > cont) {
-				// Crear Cuenta
-				System.out.println("nombre");
+				
+				// Crear una cuenta que es almacenada en un Arraylist
+				
+				System.out.println("Nombre de usuario");
 				String nombre = entrada.nextLine();
 				if(nombre.isEmpty()) {
 					nombre = entrada.nextLine();
 				}
 				
-				System.out.println("contra");
+				System.out.println("Contraseña");
 				String contra = entrada.nextLine();
 				
-				System.out.println("tel");
+				System.out.println("Número de teléfono");
 				int tel = entrada.nextInt();
 				
-				System.out.println("Correo");
+				System.out.println("Correo electrónico");
 				String correo = entrada.nextLine();
 				if(correo.isEmpty()) {
 					correo = entrada.nextLine();
@@ -54,27 +56,33 @@ public class clasePrincipal {
 			usuario1.mostrarUsu();
 			
 			break;
+			
+			
+			
 		case 2:
-			System.out.println("Verificar nombre");
+			
+			// Introducir el nombre de usuario y contraseña anteriores
+			System.out.println("Nombre de Usuario");
 			String nombreV = entrada.nextLine();
 			if(nombreV.isEmpty()) {
 				nombreV = entrada.nextLine();
 			}
-			System.out.println("Verificar contra");
+			
+			System.out.println("Constraseña");
 			String contraV = entrada.nextLine();	
 			
 			boolean comprobar = usuario1.verificar(nombreV, contraV);
 			if(comprobar == true) {
-				System.out.println("Constraseña correcta");
+				System.out.println("Constraseña correcta.");
 				
 				lista.mostrarTelefonos();
 				
-				System.out.println("¿Cuantos Productos quieres comprar?");
+				System.out.println("¿Cuántos productos quieres comprar?");
 				int numProductos = entrada.nextInt();
 				
 				while (numProductos > 0) {
 					
-					System.out.println("Selecciona el id del producto");
+					System.out.println("Selecciona el Id del producto que quieras comprar.");
 					int idProducto = entrada.nextInt();
 					p = lista.sellecionarCompra(idProducto); 
 					
@@ -83,38 +91,36 @@ public class clasePrincipal {
 					
 					numProductos--;
 				}
-				
-				
-				
+				tick.mostrarTelefonoComprado();
 			}
 			else {
-				System.out.println("ERROR vuelva a introducir la contraseña");
+				System.out.println("ERROR, introduzca correctamente la contraseña y nombre de usuario");
 			}
-			tick.mostrarTelefonoComprado();
+			
+			// Mostrar precio final con preoductos seleccionados 
+//			tick.mostrarTelefonoComprado();
 
 			break;
 			
 		case 3:
+			
+			// Parar la ejecucion del programa
 			
 			System.exit(0);
 			
 			break;
 			
 			
-		default: System.out.println("Introduce 1, 2 o 3");
+		default: 
+			
+			System.out.println("Introduce solo numeros: 1-3");
+			
 			break;
 			
-
-			
 			}
-	
-//		System.out.println("¿Quieres realizar otra operacion?: si-no");
-//		String respuesta = entrada.nextLine();
-//		if(respuesta.equalsIgnoreCase("si")) {
-//			continuar = true;
-//		}
+
 		
-		} while(opcion >=1 || opcion <=3 || continuar == true);
+		} while(opcion >=1 || opcion <=3 );
 		
 	}
 

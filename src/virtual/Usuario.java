@@ -17,7 +17,7 @@ public class Usuario {
 				this.correo = correo;
 				
 			}
-			// Inicializar en 0 las variable y añadir set a las que queden
+
 			public String getNombre() {
 				return nombre;
 			}
@@ -33,9 +33,6 @@ public class Usuario {
 			public int getTelefono() {
 				return this.telefono;
 			}
-//			public String getDatos() {
-//				return "Usuario [nombre=" + nombre + ", constrasenya=" + constrasenya + "]";
-//			}
 			
 			public String getDatos() {
 				return "Datos registrados [nombre=" + nombre + ", constrasenya=" + constrasenya + ", correo=" + correo
@@ -50,9 +47,11 @@ public class Usuario {
 			this.listadoRegistro = new ArrayList<resgistro>();
 			
 		}
+		
 		public void meterUsuario(String nombre, String contra, int tel,String correo ) {
 			listadoRegistro.add(new resgistro(nombre, contra,tel,correo));
 		}
+		
 		public void mostrarUsu () {
 			
 			Iterator it = listadoRegistro.iterator();
@@ -62,7 +61,9 @@ public class Usuario {
 				System.out.println(pp.getDatos());
 			}
 		}
-		// Podria ir a la clase Principal
+		
+		// Verificar que el nobre de Usuario y la constraseña son correctos
+		
 		public boolean verificar(String nombre, String contra) {
 			boolean verificado = false;
 			resgistro n = null;

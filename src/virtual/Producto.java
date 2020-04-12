@@ -1,4 +1,6 @@
 package virtual;
+import java.util.*;
+
 
 public class Producto {
 	private int id,versionSistema,Capacidad,precio;
@@ -53,15 +55,11 @@ public class Producto {
 		this.marca = marca;
 	}
 	public void setSistemaOperativo(String sistemaOperativo) {
-		SistemaOperativo = sistemaOperativo;
+		this.SistemaOperativo = sistemaOperativo;
 	}
 	
-//	public String toString() {
-//		return "Producto [id=" + id + ", versionSistema=" + versionSistema + ", Capacidad=" + Capacidad + ", marca="
-//				+ marca + ", SistemaOperativo=" + SistemaOperativo + ", Descripcion=" + Descripcion + "]";
-//	}
 	public void  getDatos() {
-		System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s\n",id,versionSistema,Capacidad,marca,SistemaOperativo,precio+" euros");
+		System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s\n",id,versionSistema+".v",Capacidad+" GB",marca,SistemaOperativo,precio+" euros");
 	}
 	
 	
