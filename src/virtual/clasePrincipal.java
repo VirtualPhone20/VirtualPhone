@@ -5,7 +5,7 @@ import java.util.*;
 public class clasePrincipal {
 	static listaProductos lista = new listaProductos();
 	static Scanner entrada = new Scanner(System.in);
-	static Usuario usuario1 = new Usuario();
+	static listadoUsuario usuario1 = new listadoUsuario();
 	static Producto p;
 	static ticket tick = new ticket();
 	
