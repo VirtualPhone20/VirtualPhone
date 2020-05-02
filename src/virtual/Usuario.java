@@ -46,7 +46,7 @@ public class Usuario {
 				return "Datos registrados [nombre=" + nombre + ", constrasenya=" + constrasenya + ", correo=" + correo
 						+ ", telefono=" + telefono + "]";
 			}
-			
+	
 		
 		
 

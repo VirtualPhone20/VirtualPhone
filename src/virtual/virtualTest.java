@@ -58,7 +58,7 @@ class virtualTest {
 	
 	public void test3() {
 		
-		System.out.println("Suma de precio productos");
+		System.out.println("Suma de precio productos para obtener el resultado total");
 		System.out.println("Por ejemplo: id(2), VersionSistema(10), Capacidad(64), Marca(LG), Sistema Operativo(Android), precio(222)");
 		System.out.println("Segundo ejemplo: id(4), VersionSistema(11), Capacidad(64), Marca(Iphone), Sistema Operativo(IOS), precio(1000)");
 		ArrayList<Producto> telefonosEsperados = new ArrayList<Producto>();
