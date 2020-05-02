@@ -49,7 +49,6 @@ class virtualTest {
 		
 		int idObtenido = telefonosEsperados.get(0).getId();
 		System.out.println("Id obtenido: "+idObtenido);
-
 		assertEquals(idEsperado, idObtenido);
 		
 	}
