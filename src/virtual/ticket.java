@@ -27,7 +27,7 @@ public class ticket {
 	
 		}
 		System.out.println("-------------------------------------------------------------------------------------------------");
-		System.out.printf("Precio Total: "+precioTotal()+" euros\n");
+		System.out.printf("Precio Total: " + precioTotal() + " euros\n");
 		System.out.println("*****************************************************************************************************");
 		
 	}

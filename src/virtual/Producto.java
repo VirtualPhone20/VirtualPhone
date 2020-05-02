@@ -58,8 +58,13 @@ public class Producto {
 		this.SistemaOperativo = sistemaOperativo;
 	}
 	
-	public void  getDatos() {
+	public void getDatos() {
 		System.out.printf("%-15s%-15s%-15s%-15s%-15s%-15s\n",id,versionSistema+".v",Capacidad+" GB",marca,SistemaOperativo,precio+" euros");
+	}
+	
+	public String devolverDatos() {
+		return "Producto [id=" + id + ", versionSistema=" + versionSistema + ", Capacidad=" + Capacidad + ", precio="
+				+ precio + ", marca=" + marca + ", SistemaOperativo=" + SistemaOperativo + "]";
 	}
 	
 	
