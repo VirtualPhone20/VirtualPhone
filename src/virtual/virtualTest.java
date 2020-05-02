@@ -69,7 +69,7 @@ class virtualTest {
 		int sumaEsperada = 1222;
 
 		assertEquals(sumaObtenida, sumaEsperada);
-		
+		System.out.println("ejecucion terminada after");
 	}
 
 }
