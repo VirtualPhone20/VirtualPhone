@@ -1,12 +1,14 @@
-package virtual;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
+
+import virtual.Producto;
+import virtual.Usuario;
+import virtual.listaProductos;
 
 class virtualTest {
 	static Usuario usuarioRegistrado;
@@ -70,10 +72,4 @@ class virtualTest {
 		assertEquals(sumaObtenida, sumaEsperada);
 		
 	}
-
 }
-	
-
-	
-
-
